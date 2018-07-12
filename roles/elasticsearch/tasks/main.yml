@@ -8,8 +8,7 @@
 - name: Install Elasticsearch
   yum:
    name: elasticsearch
-   update_cache: yes
-
+   
 # Update Elasticsearch config file to allow access (to secure Elasticsearch, bind to 'localhost').
 
 - name: Updating the config file to allow outside access
@@ -26,12 +25,6 @@
    regexp: 'http.port:'
    line: 'http.port: 9200'
    
-- name: Add Xpac
-  lineinfile:
-    destfile: /etc/elasticsearch/elasticsearch.yml
-    regexp: 'xpac'
-    line: 'xpack.security.enabled: false'
-
 # Start Elasticsearch
 - name: Starting Elasticsearch
   service:
