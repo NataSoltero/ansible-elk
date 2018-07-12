@@ -1,0 +1,17 @@
+---
+#
+# Installing Filebeat
+#
+
+# Install Filebeat 
+
+- name: Install Filebeat 
+  yum:
+   name: filebeat
+   
+# Starting Filebeat
+
+- name: Starting Filebeat
+  service:
+   name: filebeat
+   state: started
