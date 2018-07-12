@@ -28,13 +28,7 @@
    destfile: /etc/kibana/kibana.yml
    regexp: 'elasticsearch.url:'
    line: 'elasticsearch.url: "http://localhost:9200"'
-   
-- name: Add Xpac
-  lineinfile:
-    destfile: /etc/kibana/kibana.yml
-    regexp: 'xpac'
-    line: 'xpack.security.enabled: false'
-    
+       
 # Starting Kibana
 
 - name: Starting Kibana
