@@ -8,6 +8,6 @@
   become_user: root
   roles:
   - { role: elasticsearch }
+  - { role: filebeat-logzio }
   - { role: kibana }
   - { role: metricbeat }
-  - { role: filebeat-logzio }
