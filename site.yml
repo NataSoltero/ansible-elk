@@ -7,6 +7,6 @@
   become: yes
   become_user: root
   roles:
-  - elasticsearch
-  - kibana
-  - metricbeat
+  - { role: elasticsearch }
+  - { role: kibana }
+  - { role: metricbeat }
