@@ -10,12 +10,6 @@
    name: metricbeat
    update_cache: yes
    
-- name: Add Xpac
-  lineinfile:
-    destfile: /etc/elasticsearch/elasticsearch.yml
-    regexp: 'xpac'
-    line: 'xpack.security.enabled: false'
-
 # Starting Metricbeat
 
 - name: Starting Metricbeat
